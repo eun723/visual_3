@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
+            ['Year', '면수', '등록차량수'],
+            ['2015', 3877326, 3035867],
+            ['2016', 3983291, 3075333],
+            ['2017',  4053875, 3106955],
+            ['2018', 4129723, 3121009],
+            ['2019', 4250682, 3123564]
+          ]);
+
+      var options = {'title':'서울시 주차장 면수 및 평균등록차량수',
+                     'width':400,
+                     'height':300,
+                     vAxis: {
+                 viewWindow: {
+                     min: 2500000,
+                     max: 5000000
+                 },
+                 ticks: [2500000,3000000,3500000,4000000,4500000]
+           },
+                   };
+
+       var chart = new google.visualization.LineChart(document.getElementById('chart_div1'));
+      chart.draw(data, options);
+    }
+    </script>
+
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
+            ['Year', '공영 면수', '민영 면수'],
+            ['2016',0.004301,0.028594],
+            ['2017',-0.014022,0.019422],
+            ['2018', -0.029900, 0.021230],
+            ['2019', -0.033081,0.032362]
+          ]);
+
+      var options = {'title':'전년도 대비 면수 증가율',
+                     'width':400,
+                     'height':300};
+
+       var chart = new google.visualization.ScatterChart(document.getElementById('chart_div3'));
+
+       chart.draw(data, options);
+    }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
+            ['Year', '공영 개소', '민영 개소'],
+            ['2016',-0.042092, 0.031305],
+            ['2017',0.014185,-0.002279],
+            ['2018', 0.034599,-0.006418],
+            ['2019', 0.126550,0.022620]
+          ]);
+
+      var options = {'title':'전년도 대비 개소 증가율',
+                     'width':400,
+                     'height':300};
+
+    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div2'));
+
+    chart.draw(data, options);
+    }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
+            ['자치구', '면수 합계','등록차량'],
+              ['강남구', 395951, 235415],
+              ['강동구', 193311, 139549],
+              ['강북구', 91187, 76364],
+              ['강서구', 262157, 204675],
+              ['관악구', 152131, 120050],
+              ['광진구', 138741, 99299],
+              ['구로구', 183896, 144465],
+              ['금천구', 129455, 87581],
+              ['노원구', 176629, 152071],
+              ['도봉구', 109751, 96435],
+              ['동대문구', 138200, 97910],
+              ['동작구', 134083, 105472],
+              ['마포구', 186203, 117907],
+              ['서대문구', 112259, 87104],
+              ['서초구', 261294, 181182],
+              ['성동구', 133724, 106263],
+              ['성북구', 156915, 119321],
+              ['송파구', 351025, 240559],
+              ['양천구', 162797, 149673],
+              ['영등포구', 184322, 142010],
+              ['용산구', 113591, 76521],
+              ['은평구', 146696, 129820],
+              ['종로구', 95350, 50052],
+              ['중구', 107399, 51736],
+              ['중랑구', 133615, 112723]
+          ]);
+
+      var options = {'title':'2019년 구별 주차장 면수 및 등록 차량 대수',
+                     'width':700,
+                     'height':700,
+                     series : {1 : {type : 'line'}}};
+
+      var chart = new google.visualization.BarChart(document.getElementById("chart_div4"));
+
+      chart.draw(data, options);
+    }
+    </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+  var data = new google.visualization.DataTable();
+  var data = google.visualization.arrayToDataTable([
+        ['자치구', '공영면수', '민영면수'],
+        ['강남구',	27712,	764190],
+        ['강동구',	22790,	363832],
+        ['강북구',	10216,	172158],
+        ['강서구',	17090,	507224],
+        ['관악구',	15032,	289230],
+        ['광진구',	11238,	266244],
+        ['구로구',	10686,	357106],
+        ['금천구',	8036,	250874],
+        ['노원구',	7972,	345286],
+        ['도봉구',	10864,	208638],
+        ['동대문구',	12052,	264348],
+        ['동작구',	7336,	260830],
+        ['마포구',14278,	358128],
+        ['서대문구',	11892,	212626],
+        ['서초구',	14792,	507796],
+        ['성동구',16348,	251100],
+        ['성북구',	14566,	299264],
+        ['송파구',	38618,	663432],
+        ['양천구',	14412,	311182],
+        ['영등포구',19118,	349526],
+        ['용산구',	13064,	214118],
+        ['은평구',	11442,	281950],
+        ['종로구',12284,	178416],
+        ['중구',10816,	203982],
+        ['중랑구',10816,	203982]
+      ]);
+
+  /*var options = {
+             width: 600,
+             height: 800,
+             legend: { position: 'top', maxLines: 3 },
+             bar: { groupWidth: '75%' },
+             isStacked: true
+           };*/
+
+   var options_fullStacked = {
+     'title':'2019 구별 공영 및 민영 주차장 비율',
+      isStacked: 'percent',
+      width: 700,
+      height: 700,
+      legend: {position: 'top', maxLines: 3},
+      hAxis: {
+        minValue: 0,
+        ticks: [0, .25, .5, .75, 1]
+      }
+    };
+
+  var chart = new google.visualization.BarChart(document.getElementById("chart_div5"));
+  chart.draw(data, options_fullStacked);
+}
+</script>
+
+  </head>
+
+  <body>
+
+<div align=center>Data Visualization Assignment 3</div>
+    <div id="chart_div1"></div>
+    <div id="chart_div2"></div>
+    <div id="chart_div3"></div>
+    <div id="chart_div4"></div>
+    <div id="chart_div5"></div>
+  </body>
+</html>
